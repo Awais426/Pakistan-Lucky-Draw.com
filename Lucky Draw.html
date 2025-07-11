@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efforts Brings Success</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkred: '#8B0000',
+                        yellow: '#FFD700',
+                        black: '#000000',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .winner-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .winner-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .floating-notice {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/923124982010" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="bg-darkred py-4 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Flag_of_Pakistan.svg" alt="Pakistan Flag" class="h-10 mr-3">
+                <h1 class="text-2xl md:text-3xl font-bold text-yellow">Efforts Brings Success</h1>
+            </div>
+            <div class="hidden md:flex space-x-4">
+                <a href="#home" class="text-white hover:text-yellow">Home</a>
+                <a href="#how-it-works" class="text-white hover:text-yellow">How It Works</a>
+                <a href="#winners" class="text-white hover:text-yellow">Last Winners</a>
+                <a href="#register" class="text-white hover:text-yellow">Register</a>
+            </div>
+            <button class="md:hidden text-white">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-12 md:py-20 bg-gradient-to-b from-darkred to-black">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h2 class="text-3xl md:text-5xl font-bold text-yellow mb-4">Win a Brand New iPhone!</h2>
+                <p class="text-xl mb-6">Join our monthly lucky draw for just <span class="text-yellow font-bold">Rs. 10 per entry</span> and get a chance to win the latest iPhone!</p>
+                <div class="bg-black p-4 rounded-lg border border-yellow mb-6">
+                    <p class="text-yellow text-lg">🚨 Only for Pakistani Users 🚨</p>
+                    <p class="text-sm">This website is exclusively for Pakistani citizens. Foreign entries will be disqualified.</p>
+                </div>
+                <a href="#register" class="bg-yellow text-darkred font-bold py-3 px-6 rounded-lg hover:bg-white transition duration-300 inline-block">Register Now</a>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative floating-notice">
+                    <img src="https://www.apple.com/v/iphone/home/bk/images/meta/iphone__ky2k6x5u6vue_og.png" alt="iPhone" class="w-64 md:w-80 pulse">
+                    <div class="absolute -bottom-6 left-0 right-0 bg-darkred text-white py-2 px-4 rounded-lg text-center">
+                        <p class="font-bold">Current Participants: <span id="participantCount" class="text-yellow">1,248</span></p>
+                        <p class="text-sm italic">The more entries you buy, the higher your chances of winning!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-12 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-yellow mb-8 text-center">How It Works</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-darkred p-6 rounded-lg">
+                    <div class="text-yellow text-4xl mb-4">1</div>
+                    <h3 class="text-xl font-bold mb-2">Register Your Entry</h3>
+                    <p>Fill out the registration form with your Pakistani CNIC and contact details.</p>
+                </div>
+                <div class="bg-darkred p-6 rounded-lg">
+                    <div class="text-yellow text-4xl mb-4">2</div>
+                    <h3 class="text-xl font-bold mb-2">Pay Rs. 10 per Entry</h3>
+                    <p>Each entry costs just Rs. 10. You can buy multiple entries to increase your chances.</p>
+                </div>
+                <div class="bg-darkred p-6 rounded-lg">
+                    <div class="text-yellow text-4xl mb-4">3</div>
+                    <h3 class="text-xl font-bold mb-2">Wait for the Draw</h3>
+                    <p>One lucky winner is selected every month through a transparent random draw.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Last Winners -->
+    <section id="winners" class="py-12 bg-darkred">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-yellow mb-8 text-center">Our Last Winners</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Winner 1 -->
+                <div class="bg-black p-6 rounded-lg winner-card border border-yellow">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Winner" class="w-16 h-16 rounded-full border-2 border-yellow mr-4">
+                        <div>
+                            <h3 class="font-bold text-yellow">Ali Khan</h3>
+                            <p class="text-sm">Lahore, Punjab</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-sm">Won: <span class="text-yellow">iPhone 14 Pro</span></p>
+                        <p class="text-sm">Draw Date: <span class="text-yellow">15 June 2025</span></p>
+                    </div>
+                    <p class="text-sm italic">"I couldn't believe it when I got the call! This is life-changing!"</p>
+                </div
+                
+                <!-- Winner 2 -->
+                <div class="bg-black p-6 rounded-lg winner-card border border-yellow">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/57.jpg" alt="Winner" class="w-16 h-16 rounded-full border-2 border-yellow mr-4">
+                        <div>
+                            <h3 class="font-bold text-yellow">Fatima Ahmed</h3>
+                            <p class="text-sm">Karachi, Sindh</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-sm">Won: <span class="text-yellow">1,00,000 rupees</span></p>
+                        <p class="text-sm">Draw Date: <span class="text-yellow">15 May 2025</span></p>
+                    </div>
+                    <p class="text-sm italic">"I entered with just Rs. 10 and won this amazing phone!"</p>
+                </div>
+                
+                <!-- Winner 3 -->
+                <div class="bg-black p-6 rounded-lg winner-card border border-yellow">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="Winner" class="w-16 h-16 rounded-full border-2 border-yellow mr-4">
+                        <div>
+                            <h3 class="font-bold text-yellow">Usman Malik</h3>
+                            <p class="text-sm">Islamabad, ICT</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-sm">Won: <span class="text-yellow">Honda 125</span></p>
+                        <p class="text-sm">Draw Date: <span class="text-yellow">15 April 2025</span></p>
+                    </div>
+                    <p class="text-sm italic">"The process was so simple and transparent. Thank you!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section id="register" class="py-12 bg-black">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="text-3xl font-bold text-yellow mb-8 text-center">Register for the Lucky Draw</h2>
+            <div class="bg-darkred p-6 md:p-8 rounded-lg">
+                <form id="registrationForm">
+                    <div class="mb-4">
+                        <label for="name" class="block mb-2">Full Name</label>
+                        <input type="text" id="name" class="w-full px-4 py-2 rounded bg-black text-white border border-yellow" required>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="phone" class="block mb-2">Phone Number</label>
+                        <input type="tel" id="phone" class="w-full px-4 py-2 rounded bg-black text-white border border-yellow" placeholder="03001234567" required>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="city" class="block mb-2">City</label>
+                        <select id="city" class="w-full px-4 py-2 rounded bg-black text-white border border-yellow" required>
+                            <option value="">Select Your City</option>
+                            <option value="Karachi">Karachi</option>
+                            <option value="Lahore">Lahore</option>
+                            <option value="Islamabad">Islamabad</option>
+                            <option value="Peshawar">Peshawar</option>
+                            <option value="Quetta">Quetta</option>
+                            <option value="Faisalabad">Faisalabad</option>
+                            <option value="Multan">Multan</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Gujranwala">Gujranwala</option>
+                            <option value="Rawalpindi">Rawalpindi</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="entries" class="block mb-2">Number of Entries (Rs. 10 each)</label>
+                        <input type="number" id="entries" min="1" value="1" class="w-full px-4 py-2 rounded bg-black text-white border border-yellow" required>
+                        <p class="text-sm mt-1">Total Amount: <span id="totalAmount" class="text-yellow">Rs. 10</span></p>
+                        <p class="text-yellow mt-2">Send payment via JazzCash/EasyPaisa to: 03124982010</p>
+                        <p class="text-sm">Send screenshot of payment to WhatsApp after registration</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <input type="checkbox" id="agree" class="mr-2" required>
+                        <label for="agree">I agree to the terms and conditions</label>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-yellow text-darkred font-bold py-3 px-6 rounded-lg hover:bg-white transition duration-300">Submit & Pay</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darkred py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold text-yellow">Pakistani iPhone Lucky Draw</h3>
+                    <p>For Pakistani Citizens Only</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-yellow"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white hover:text-yellow"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/923124982010" class="text-white hover:text-yellow"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-yellow mt-6 pt-6 text-center">
+                <p>&copy; 2023 Efforts Brings Success. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Calculate total amount based on number of entries
+        document.getElementById('entries').addEventListener('input', function() {
+            const entries = parseInt(this.value) || 1;
+            const total = entries * 10;
+            document.getElementById('totalAmount').textContent = `Rs. ${total}`;
+        });
+        
+        // Form submission
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validate phone number
+            const phone = document.getElementById('phone').value;
+            if (phone.length < 11 || isNaN(phone)) {
+                alert('Please enter a valid Pakistani phone number');
+                return;
+            }
+            
+            // If all validations pass
+            alert('Registration successful! You will be redirected to payment.');
+            // In a real implementation, you would process payment here
+        });
+        
+        // Simulate increasing participant count
+        setInterval(() => {
+            const countElement = document.getElementById('participantCount');
+            let count = parseInt(countElement.textContent.replace(/,/g, ''));
+            count += Math.floor(Math.random() * 3) + 1;
+            countElement.textContent = count.toLocaleString();
+        }, 5000);
+    </script>
+</body>
+</html>
